@@ -67,7 +67,7 @@
 	/*----------------------------------------------------- */
 	/* Stat Counter
   	------------------------------------------------------- */
-   var statSection = $("#stats"),
+   let statSection = $("#stats"),
        stats = $(".stat-count");
 
    statSection.waypoint({
@@ -77,7 +77,7 @@
       	if (direction === "down") {       		
 
 			   stats.each(function () {
-				   var $this = $(this);
+				   let $this = $(this);
 
 				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
 				   	duration: 4000,
@@ -103,7 +103,7 @@
 	/*---------------------------------------------------- */
 	/*	Masonry
 	------------------------------------------------------ */
-	var containerProjects = $('#folio-wrapper');
+	let containerProjects = $('#folio-wrapper');
 
 	containerProjects.imagesLoaded( function() {
 
@@ -137,7 +137,7 @@
 	/*-----------------------------------------------------*/
   	/* Navigation Menu
    ------------------------------------------------------ */  
-   var toggleButton = $('.menu-toggle'),
+   let toggleButton = $('.menu-toggle'),
        nav = $('.main-navigation');
 
    // toggle button
@@ -163,20 +163,20 @@
    /*---------------------------------------------------- */
   	/* Highlight the current section in the navigation bar
   	------------------------------------------------------ */
-	var sections = $("section"),
+	let sections = $("section"),
 	navigation_links = $("#main-nav-wrap li a");	
 
 	sections.waypoint( {
 
        handler: function(direction) {
 
-		   var active_section;
+		   let active_section;
 
 			active_section = $('section#' + this.element.id);
 
 			if (direction === "up") active_section = active_section.prev();
 
-			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
+			let active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
 
          navigation_links.parent().removeClass("current");
 			active_link.parent().addClass("current");
@@ -194,7 +194,7 @@
 	 	
 	 	e.preventDefault();
 
-   	var target = this.hash,
+   	let target = this.hash,
     	$target = $(target);
 
     	$('html, body').stop().animate({
@@ -218,7 +218,6 @@
 
 	/* local validation */
 	$('#contactForm').validate({
-
 		/* submit via ajax */
 		submitHandler: function(form) {
 
@@ -227,7 +226,7 @@
 			$.ajax({      	
 
 		      type: "POST",
-		      url: "inc/sendEmail.php",
+		      url: "https://formspree.io/jguilhermebp@live.com",
 		      data: $(form).serialize(),
 		      beforeSend: function() { 
 
@@ -268,10 +267,10 @@
  	/*----------------------------------------------------- */
   	/* Back to top
    ------------------------------------------------------- */ 
-	var pxShow = 300; // height on which the button will show
-	var fadeInTime = 400; // how slow/fast you want the button to show
-	var fadeOutTime = 400; // how slow/fast you want the button to hide
-	var scrollSpeed = 300; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+	let pxShow = 300; // height on which the button will show
+	let fadeInTime = 400; // how slow/fast you want the button to show
+	let fadeOutTime = 400; // how slow/fast you want the button to hide
+	let scrollSpeed = 300; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
 
    // Show or hide the sticky footer button
 	jQuery(window).scroll(function() {
