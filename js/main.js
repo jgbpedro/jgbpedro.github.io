@@ -226,7 +226,10 @@
 			$.ajax({      	
 
 		      type: "POST",
-		      url: "https://formspree.io/jguilhermebp@live.com",
+		      url: "https://formspree.io/f/xknyneed",
+			  headers: {
+				'Content-Type':'application/json'
+			},
 		      data: $(form).serialize(),
 		      beforeSend: function() { 
 
