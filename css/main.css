@@ -2107,7 +2107,7 @@ header .logo a {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 20px 0;
-	background-color: #ffffff;
+	background-image: linear-gradient(180deg, #ffffff, #888888);
  }
 
 
